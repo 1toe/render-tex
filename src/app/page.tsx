@@ -26,7 +26,7 @@ export default function HomePage() { // Página principal: composición de formu
       <header className="w-full border-b border-border bg-card/70 backdrop-blur flex flex-col items-center px-4 py-6 sm:py-8">
         <div className="flex items-center gap-3 mb-3">
           <Sigma size={48} className="text-primary drop-shadow-sm" />
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-primary">RnDeR TeX</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-primary">ReNDeR TeX</h1>
         </div>
         <p className="text-sm sm:text-base max-w-2xl text-center text-muted-foreground">
           Escribe, ajusta y listo.
