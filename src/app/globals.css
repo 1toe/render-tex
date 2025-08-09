@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 233 60% 94.5%; /* #E8EAF6 Very Light Blue */
+    --foreground: 231 30% 25%; /* Darker blue-gray for text */
+    --card: 233 60% 97%; /* Slightly whiter than background */
+    --card-foreground: 231 30% 25%;
+    --popover: 233 60% 97%;
+    --popover-foreground: 231 30% 25%;
+    --primary: 231 48% 48%; /* #3F51B5 Deep Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 233 50% 88%; /* Lighter shade for secondary elements */
+    --secondary-foreground: 231 30% 25%;
+    --muted: 233 50% 80%;
+    --muted-foreground: 231 30% 45%;
+    --accent: 260 44% 63%; /* #9575CD Soft Violet */
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 233 30% 80%;
+    --input: 233 30% 88%;
+    --ring: 260 44% 63%; /* Accent for focus rings */
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --sidebar-background: 233 50% 90%;
+    --sidebar-foreground: 231 30% 25%;
+    --sidebar-primary: 231 48% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 44% 63%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 233 30% 80%;
+    --sidebar-ring: 260 44% 63%;
+  }
+
+  .dark {
+    --background: 230 25% 18%; /* Dark Blue-Gray */
+    --foreground: 230 25% 95%; /* Light Gray */
+    --card: 230 25% 22%;
+    --card-foreground: 230 25% 95%;
+    --popover: 230 25% 22%;
+    --popover-foreground: 230 25% 95%;
+    --primary: 231 48% 58%; /* Lighter Deep Blue for dark mode */
+    --primary-foreground: 230 25% 10%;
+    --secondary: 230 25% 30%;
+    --secondary-foreground: 230 25% 95%;
+    --muted: 230 25% 30%;
+    --muted-foreground: 230 25% 65%;
+    --accent: 260 44% 73%; /* Lighter Soft Violet */
+    --accent-foreground: 230 25% 10%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 230 25% 28%;
+    --input: 230 25% 28%;
+    --ring: 260 44% 73%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 230 25% 15%;
+    --sidebar-foreground: 230 25% 90%;
+    --sidebar-primary: 231 48% 58%;
+    --sidebar-primary-foreground: 230 25% 10%;
+    --sidebar-accent: 260 44% 73%;
+    --sidebar-accent-foreground: 230 25% 10%;
+    --sidebar-border: 230 25% 25%;
+    --sidebar-ring: 260 44% 73%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+  code {
+    @apply font-mono text-xs sm:text-[0.75rem];
+  }
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+  .skip-link { transition: transform .2s, background-color .2s; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  }
+}
